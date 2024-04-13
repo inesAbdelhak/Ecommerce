@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdresseUser{% endblock %}
+
+{% block body %}
+    <h1>AdresseUser</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ adresse_user.id }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ adresse_user.Type }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ adresse_user.Nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ adresse_user.Prenom }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ adresse_user.Tel }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ adresse_user.Adresse }}</td>
+            </tr>
+            <tr>
+                <th>CP</th>
+                <td>{{ adresse_user.CP }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ adresse_user.Ville }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ adresse_user.Pays }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_adresse_user_index') }}">back to list</a>
+
+    <a href="{{ path('app_adresse_user_edit', {'id': adresse_user.id}) }}">edit</a>
+
+    {{ include('adresse_user/_delete_form.html.twig') }}
+{% endblock %}
